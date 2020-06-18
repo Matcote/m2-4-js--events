@@ -47,7 +47,13 @@ All DOM nodes have methods we can use to _notify_ us of an event.
 ```
 
 ```js
-// Example
+const door = document.querySelector("#secret-door");
+
+door.addEventListener("click", function () {
+  //whos there?
+  console.log("Is it Bob?");
+  //if yes, then disable doorbell
+});
 ```
 
 ---
@@ -121,15 +127,15 @@ Handlers registered on nodes with children will also receive events that happen 
 `<p>A paragraph with a <button id="the-btn">button</button>.</p>` [🐇](https://codepen.io/gnomecircle/pres/BajQgzy?editors=1011)
 
 ```js
-let para = document.querySelector('p');
-let button = document.querySelector('button');
+let para = document.querySelector("p");
+let button = document.querySelector("button");
 
-para.addEventListener('mousedown', () => {
-  console.log('Handler for paragraph.');
+para.addEventListener("mousedown", () => {
+  console.log("Handler for paragraph.");
 });
 
-button.addEventListener('mousedown', (event) => {
-  console.log('Handler for button.');
+button.addEventListener("mousedown", (event) => {
+  console.log("Handler for button.");
   if (event.button == 2) event.stopPropagation();
 });
 ```
