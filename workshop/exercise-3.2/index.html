@@ -2,10 +2,33 @@
 <html>
   <head>
     <title>Exercise 3.2</title>
-    <style></style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MuseoModerno&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        height: 98vh;
+        width: 98vw;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        font-size: 100px;
+        font-family: "MuseoModerno", cursive;
+      }
+      button {
+        height: 100px;
+        width: 150px;
+        font-size: xx-large;
+      }
+    </style>
   </head>
   <body>
-    <div class="main" id="main"></div>
+    <button>Start</button>
+    <div class="main" id="main">
+      <span id="mins"></span>:<span id="secs"></span>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
