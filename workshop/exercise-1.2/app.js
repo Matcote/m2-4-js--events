@@ -7,7 +7,6 @@ let result = document.querySelector(".result");
 let time = document.querySelector("#time");
 let random = Math.round(Math.random() * 5);
 let yesNo = "false";
-let timeLeft = "true";
 time.innerHTML = random;
 
 let myFunction = function () {
@@ -22,3 +21,10 @@ let timeOut = setTimeout(function () {
     body.removeEventListener("click", myFunction);
   }
 }, random * 1000);
+
+const myVar = setInterval(() => {
+  time.innerHTML = --random;
+  if (random == 0) {
+    clearInterval(myVar);
+  }
+}, 1000);
